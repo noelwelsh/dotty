@@ -1,13 +1,19 @@
 import scala.compiletime.ops.any._
 
 object Test {
-  val t32: 1 == 1 = true
-  val t33: 0 == false = false
-  val t34: 10 == "5" = true // error
-  val t35: 10 == 10 = false // error
+  val t1: 10 == "5" = true // error
+  val t2: 10 == 10 = false // error
 
-  val t36: 1 != 1 = false
-  val t37: 0 != 1 = true
-  val t38: false != 5 = false // error
-  val t39: 10 != 10 = true // error
+  val t3: false != 5 = false // error
+  val t4: 10 != 10 = true // error
+
+  val t5: "dotty" == "scala" = true // error
+  val t6: "dotty" == "dotty" = false // error
+
+  val t7: "dotty" != "scala" = false // error
+  val t8: "dotty" != "dotty" = true // error
+
+  // Non-singleton types don't compile
+  val t9: List[Int] == List[Int] = true
+  val t10: Int == Int = false
 }
