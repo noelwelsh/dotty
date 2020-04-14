@@ -14,6 +14,6 @@ object Test {
   val t8: "dotty" != "dotty" = true // error
 
   // Non-singleton types don't compile
-  val t9: List[Int] == List[Int] = true
-  val t10: Int == Int = false
+  val t9: List[Int] == List[Int] = true // error
+  val t10: Int == Int = false // error
 }

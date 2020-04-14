@@ -39,12 +39,12 @@
    |                               Found:    (true : Boolean)
    |                               Required: (false : Boolean)
 -- [E007] Type Mismatch Error: tests/neg/singleton-ops-any.scala:17:35 -------------------------------------------------
-17 |  val t9: List[Int] == List[Int] = true
+17 |  val t9: List[Int] == List[Int] = true // error
    |                                   ^^^^
    |                                   Found:    (true : Boolean)
    |                                   Required: List[Int] == List[Int]
 -- [E007] Type Mismatch Error: tests/neg/singleton-ops-any.scala:18:24 -------------------------------------------------
-18 |  val t10: Int == Int = false
+18 |  val t10: Int == Int = false // error
    |                        ^^^^^
    |                        Found:    (false : Boolean)
    |                        Required: Int == Int
